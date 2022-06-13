@@ -1,4 +1,6 @@
-import { comPagination } from "./comPagination";
+import { pagination } from "./pagination"
+
+
 /**
  * api工具
  */
@@ -6,7 +8,7 @@ export class ApiT {
     /**
      * 获取分页查询数据
      */
-    static getPageData(pagination = comPagination(), query = {}) {
+    static getPageData(pagination = new pagination(), query = {}) {
         return {
             page_size: pagination.pageSize,
             page: pagination.currentPage,
@@ -19,7 +21,7 @@ export class ApiT {
      * @param {*} index 索引 从0开始的这个
      * @param {*} pagination 当前页面的分页信息
      */
-    static getI(index, pagination = comPagination()) {
+    static getI(index, pagination = new pagination()) {
         return index + 1 + (pagination.currentPage - 1) * pagination.pageSize;
     }
 
