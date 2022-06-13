@@ -1,0 +1,3 @@
+@/static/icon
+
+@/static/images/
