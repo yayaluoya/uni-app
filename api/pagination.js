@@ -8,13 +8,5 @@ export class Pagination {
 
     constructor(number = 10) {
         this.pageSize = number;
-
-        /** 是否是最后一页 */
-        Object.defineProperty(this, 'lastPage', {
-            enumerable: false,
-            get: () => {
-                return this.pageSize * this.currentPage >= this.total;
-            },
-        });
     }
 };
