@@ -1,7 +1,7 @@
 /**
  * 分页对象
  */
-export class pagination {
+export class Pagination {
     total = 0;
     currentPage = 1;
     pageSize = 0;
