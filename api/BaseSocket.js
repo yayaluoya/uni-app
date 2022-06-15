@@ -47,7 +47,7 @@ export class BaseSocket extends BaseEvent {
         });
     }
 
-    /** 停止发送心跳 */
+    /** 关闭 */
     static close() {
         clearInterval(this.palpitateTime);
         this.wsp.then(() => {
